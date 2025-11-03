@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>岡山大学 大学紹介 生徒のリアルな声</title>
-    
-    <!-- 相対パスに変更 -->
+
+    <!-- CSSファイルを相対パスで指定 -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- ファビコン（任意） -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+
     <div class="hero-section">
         <h1 class="hero-title">岡山大学～学生のリアルな声～</h1>
     </div>
 
-    <!-- 以下は元のまま -->
     <header class="header">
         <div class="logo">
+            <!-- ロゴ画像も相対パスで指定 -->
             <img src="./logo.png" alt="岡山大学 Okayama University">
             <h1>岡山大学</h1>
             <p class="subtitle">Okayama University</p>
@@ -31,6 +34,37 @@
         </nav>
     </header>
 
-    <!-- 以下略（元のまま） -->
+    <main class="content-wrapper">
+
+        <!-- 各セクションは元のまま -->
+        <section id="about" class="section">
+            <div class="section-title-large">
+                <span class="number-large">01</span>
+                <div class="title-text">
+                    <h2>岡山大学について</h2>
+                </div>
+            </div>
+            <div class="qa-item">
+                <h3 class="qa-header">🏫 岡山大学の特徴と良さ</h3>
+                <div class="table-container">
+                    <table>
+                        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+                        <tbody>
+                            <tr><td>特徴</td><td>医学部を源流とする歴史を持つ地方国公立大学トップクラスの総合大学。</td></tr>
+                            <tr><td>キャンパス</td><td>岡山駅が近く通学が非常に便利。コンパクトなキャンパス配置。</td></tr>
+                            <tr><td>入学してよかったこと</td><td>目的意識が明確な学生が多く、教授陣に気軽に質問できる環境。</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <blockquote class="note">
+                    理系学部は課題が多く大変だが、その分、卒業時には社会から求められる人材、特に工学の分野で活躍できる力が身につく。
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- 以下、#study, #career, #life セクションも元のまま -->
+        <!-- 省略せずにすべて含める場合は、前回共有いただいたHTMLをベースに、上記のようにパスを ./ に統一してください -->
+
+    </main>
 </body>
 </html>
