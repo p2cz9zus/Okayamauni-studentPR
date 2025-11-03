@@ -31,7 +31,6 @@ body {
 .hero-title {
     font-size: 4em; 
     margin: 0;
-    /* 元に戻す: 太字を維持 */
     font-weight: bold; 
     letter-spacing: 2px; 
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
@@ -87,7 +86,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
-    /* 元に戻す: 太字を維持 */
     font-weight: bold; 
     color: #003366;
     background-color: #f9f9f9; /* 背景色で縦線を隠す */
@@ -166,20 +164,19 @@ body {
 .list-styled li {
     margin-bottom: 15px;
     position: relative;
-    /* 【文字重なり解消維持】padding-leftを大きくして、長い見出しが収まるスペースを確保 */
-    padding-left: 140px; 
+    /* 【再修正】padding-leftをさらに広げ、最も長い見出しに対応 */
+    padding-left: 170px; 
     line-height: 1.8; /* 行の高さを広げて文字の重なりを防ぐ */
 }
 
 .point-number {
     position: absolute;
     left: 0;
-    /* 元に戻す: 太字を維持 */
     font-weight: bold; 
     color: #003366;
-    /* 【文字重なり解消維持】widthとdisplayを追加し、見出しの表示領域を確保 */
+    /* 【再修正】widthをさらに広げ、最も長い見出しに対応 */
     display: inline-block;
-    width: 130px; 
+    width: 160px; 
     text-align: right; /* 右端揃えでテキストとリスト本文の間に空間を作る */
 }
 
@@ -204,7 +201,6 @@ th, td {
 
 th {
     background-color: #f5f5f5;
-    /* 元に戻す: 太字を維持 */
     font-weight: bold;
     color: #333;
 }
