@@ -34,7 +34,7 @@ body {
     margin: 0;
     font-weight: bold; 
     letter-spacing: 2px; 
-    /* 修正：明朝体フォントファミリに変更 */
+    /* 明朝体フォントファミリに変更 */
     font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif; 
     line-height: 1.2; /* 行間を詰める */
 }
@@ -44,7 +44,7 @@ body {
 }
 
 .hero-title .subtitle {
-    /* 修正：フォントサイズを「岡山大学」よりも小さく設定 */
+    /* フォントサイズを「岡山大学」よりも小さく設定 */
     font-size: 0.4em; 
     font-weight: normal; /* サブタイトルは太字にしない */
     margin-top: 15px; 
@@ -179,8 +179,8 @@ body {
 .list-styled li {
     margin-bottom: 15px;
     position: relative;
-    /* 【文字重なり解消維持】padding-leftをさらに広げ、最も長い見出しに対応 */
-    padding-left: 170px; 
+    /* 【デスクトップ修正】padding-leftをさらに広げ、最も長い見出しに対応 */
+    padding-left: 210px; 
     line-height: 1.8; /* 行の高さを広げて文字の重なりを防ぐ */
 }
 
@@ -189,9 +189,9 @@ body {
     left: 0;
     font-weight: bold; 
     color: #003366;
-    /* 【文字重なり解消維持】widthをさらに広げ、最も長い見出しに対応 */
+    /* 【デスクトップ修正】widthをさらに広げ、最も長い見出しに対応 */
     display: inline-block;
-    width: 160px; 
+    width: 200px; 
     text-align: right; /* 右端揃えでテキストとリスト本文の間に空間を作る */
 }
 
@@ -242,6 +242,7 @@ hr {
     line-height: 1.8; 
 }
 
+
 /*=====================================
   モバイル対応 (Max-width: 767px)
 =====================================*/
@@ -271,7 +272,6 @@ hr {
     /* 3. 目次（ヘッダー）の非表示または整理 */
     .header {
         display: none; /* スマホでは目次ナビゲーションを非表示にする（コンテンツの邪魔になるため） */
-        /* または、画面上部に固定するなどの対策が必要ですが、今回はシンプルに非表示にします */
     }
     
     /* 4. セクションタイトルの調整 */
