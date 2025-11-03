@@ -37,15 +37,17 @@ body {
 }
 
 /*=====================================
-  ヘッダー/ナビゲーション（サイドバーのレイアウト）
+  ヘッダー/ナビゲーション（目次の中央配置）
 =====================================*/
 .header {
-    width: 250px; 
+    width: 900px; /* メインコンテンツの最大幅に合わせる */
     padding: 30px 0;
     text-align: center;
-    position: absolute; 
-    top: 60vh; /* ヒーローセクションの下から開始 */
-    left: 0;
+    /* 中央配置に変更 */
+    position: relative; /* absoluteを解除 */
+    top: 0; /* ヒーローセクションの直後 */
+    left: auto;
+    margin: 0 auto; /* 中央寄せ */
 }
 
 .logo h1 {
@@ -61,26 +63,35 @@ body {
 .sidebar-nav ol {
     list-style: none;
     padding: 0;
-    text-align: left;
-    border-left: 2px solid #ccc; /* ナビゲーションの縦線を再現 */
-    margin-left: 50px;
+    /* 横並びにして中央揃え */
+    border-left: none; /* 縦線を削除 */
+    text-align: center;
+    display: flex; 
+    justify-content: center; /* 項目を中央に配置 */
+    margin-left: 0; /* マージンを解除 */
+    gap: 20px; /* 項目間のスペース */
 }
 
 .sidebar-nav li {
-    padding: 5px 10px;
+    padding: 5px 15px;
     position: relative;
+    border-right: 1px solid #ccc; /* 項目間の区切り線 */
+    white-space: nowrap;
+}
+
+.sidebar-nav li:last-child {
+    border-right: none; /* 最後の項目の区切り線は不要 */
 }
 
 .nav-number {
-    position: absolute;
-    left: -20px; 
-    top: 50%;
-    transform: translateY(-50%);
+    position: static; /* absoluteを解除し、要素の流れに戻す */
+    margin-right: 5px;
     font-size: 14px;
     font-weight: bold;
     color: #003366;
-    background-color: #f9f9f9; 
-    padding: 0 5px;
+    background-color: transparent; /* 背景色を透明に戻す */
+    padding: 0;
+    transform: none;
 }
 
 .sidebar-nav a {
@@ -90,14 +101,16 @@ body {
 }
 
 /*=====================================
-  メインコンテンツエリア
+  メインコンテンツエリア（中央配置）
 =====================================*/
 .content-wrapper {
-    margin-left: 250px; /* ナビゲーションの幅を空ける */
+    /* 中央配置に変更 */
+    margin-left: auto; 
+    margin-right: auto;
     padding: 40px 80px;
     max-width: 900px;
-    /* ヒーローセクションの高さ(60vh)と、padding-topを合算して調整 */
-    padding-top: calc(40px + 60vh); 
+    /* ヒーローセクションの高さ(60vh)を考慮していたpadding-topを解除 */
+    padding-top: 40px; 
 }
 
 /* セクションタイトル (01, 02 の大きな表示) */
@@ -210,4 +223,3 @@ hr {
 .qa-item p {
     line-height: 1.8; 
 }
-
