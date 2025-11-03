@@ -164,7 +164,8 @@ body {
 .list-styled li {
     margin-bottom: 15px;
     position: relative;
-    padding-left: 25px;
+    /* 【修正済み】padding-leftを大きくして、長い見出しが収まるスペースを確保 */
+    padding-left: 140px; 
     line-height: 1.8; /* 行の高さを広げて文字の重なりを防ぐ */
 }
 
@@ -173,6 +174,10 @@ body {
     left: 0;
     font-weight: bold;
     color: #003366;
+    /* 【修正済み】widthとdisplayを追加し、見出しの表示領域を確保 */
+    display: inline-block;
+    width: 130px; 
+    text-align: right; /* 右端揃えでテキストとリスト本文の間に空間を作る */
 }
 
 /* 表のスタイル */
