@@ -1,4 +1,6 @@
-/* 基本設定 */
+/*=====================================
+  基本設定
+=====================================*/
 body {
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
     color: #333;
@@ -8,11 +10,16 @@ body {
     background-color: #f9f9f9; /* 背景色をわずかにグレーに */
 }
 
-/* ヒーローセクション（トップの背景画像とタイトル） */
+/*=====================================
+  ヒーローセクション（トップの背景画像とタイトル）
+=====================================*/
 .hero-section {
     width: 100%;
     height: 60vh; /* ビューポートの高さの60% */
-    background-image: url('okayamauni.jpg'); /* 添付画像のファイル名を反映 */
+    /* 【重要】GitHub Pages対応：リポジトリ名をパスに含める（絶対パス） 
+      ※リポジトリ名: Okayamauni-studentPR, 画像名: okayamauni.jpg と仮定
+    */
+    background-image: url('/Okayamauni-studentPR/okayamauni.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -20,32 +27,34 @@ body {
     align-items: center;
     color: #fff; /* テキストの色を白に */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストの視認性を高める影 */
-    margin-bottom: 50px; /* その後のコンテンツとの間隔 */
+    margin-bottom: 0; /* ヘッダーとの隙間は後続のコンテンツで調整 */
 }
 
 .hero-title {
-    font-size: 4em; /* 大きなフォントサイズ */
+    font-size: 4em; 
     margin: 0;
-    font-weight: bold; /* 既存の字体に合わせて太字に */
-    letter-spacing: 2px; /* 文字間隔を少し広げる */
+    font-weight: bold; 
+    letter-spacing: 2px; 
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
 }
 
-/* ヘッダー/ナビゲーション（写真のレイアウトを再現） */
+/*=====================================
+  ヘッダー/ナビゲーション（サイドバーのレイアウト）
+=====================================*/
 .header {
-    width: 250px; /* ナビゲーションの幅を確保 */
+    width: 250px; 
     padding: 30px 0;
     text-align: center;
-    position: absolute; /* 固定ナビゲーションを想定 */
+    position: absolute; 
     top: 60vh; /* ヒーローセクションの下から開始 */
     left: 0;
-    /* 画面をスクロールしてもナビゲーションを固定する場合は position: fixed; を使用 */
+    /* position: fixed; にすると画面固定になりますが、デザインを維持するため absolute */
 }
 
 .logo h1 {
     font-size: 24px;
     margin: 5px 0 0;
-    color: #003366; /* 濃い青を基調に */
+    color: #003366; 
 }
 
 .sidebar-nav {
@@ -67,13 +76,13 @@ body {
 
 .nav-number {
     position: absolute;
-    left: -20px; /* 縦線の横に数字を配置 */
+    left: -20px; 
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
     font-weight: bold;
     color: #003366;
-    background-color: #f9f9f9; /* 数字の背景を白っぽく */
+    background-color: #f9f9f9; 
     padding: 0 5px;
 }
 
@@ -83,12 +92,15 @@ body {
     font-size: 14px;
 }
 
-/* メインコンテンツエリア */
+/*=====================================
+  メインコンテンツエリア
+=====================================*/
 .content-wrapper {
     margin-left: 250px; /* ナビゲーションの幅を空ける */
     padding: 40px 80px;
     max-width: 900px;
-    padding-top: calc(40px + 60vh); /* ヒーローセクションの高さを考慮して上部パディングを調整 */
+    /* ヒーローセクションの高さ(60vh)と、padding-topを合算して調整 */
+    padding-top: calc(40px + 60vh); 
 }
 
 /* セクションタイトル (01, 02 の大きな表示) */
@@ -188,9 +200,9 @@ th {
     color: #333;
 }
 
+/* 区切り線 */
 hr {
     border: 0;
     border-top: 1px solid #e0e0e0;
     margin: 50px 0;
 }
-
