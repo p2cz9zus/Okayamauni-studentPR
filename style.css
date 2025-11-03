@@ -26,6 +26,7 @@ body {
     color: #fff; /* テキストの色を白に */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストの視認性を高める影 */
     margin-bottom: 0; 
+    text-align: center; /* タイトルを中央揃えにする */
 }
 
 .hero-title {
@@ -33,7 +34,21 @@ body {
     margin: 0;
     font-weight: bold; 
     letter-spacing: 2px; 
-    font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    /* 修正：明朝体フォントファミリに変更 */
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif; 
+    line-height: 1.2; /* 行間を詰める */
+}
+
+.hero-title span {
+    display: block; /* 岡山大学とサブタイトルを改行して縦に並べる */
+}
+
+.hero-title .subtitle {
+    /* 修正：フォントサイズを「岡山大学」よりも小さく設定 */
+    font-size: 0.4em; 
+    font-weight: normal; /* サブタイトルは太字にしない */
+    margin-top: 15px; 
+    letter-spacing: 0; /* サブタイトルは文字間隔を広げない */
 }
 
 /*=====================================
@@ -164,7 +179,7 @@ body {
 .list-styled li {
     margin-bottom: 15px;
     position: relative;
-    /* 【再修正】padding-leftをさらに広げ、最も長い見出しに対応 */
+    /* 【文字重なり解消維持】padding-leftをさらに広げ、最も長い見出しに対応 */
     padding-left: 170px; 
     line-height: 1.8; /* 行の高さを広げて文字の重なりを防ぐ */
 }
@@ -174,7 +189,7 @@ body {
     left: 0;
     font-weight: bold; 
     color: #003366;
-    /* 【再修正】widthをさらに広げ、最も長い見出しに対応 */
+    /* 【文字重なり解消維持】widthをさらに広げ、最も長い見出しに対応 */
     display: inline-block;
     width: 160px; 
     text-align: right; /* 右端揃えでテキストとリスト本文の間に空間を作る */
